@@ -1,19 +1,20 @@
-# My API App
+# express.ts
 
 A simple API application built with TypeScript and Express.
 
 ## Project Structure
 
-my-api-app/
+express.ts/
 ├── package.json
-├── src/ │
-├── app.ts
+├── app/ 
+│
+├── server.ts
 │
 ├── controllers/
-│ │ └── index.ts
+│ │ └── Controller.ts
 │ ├── models/
 │
-│ └── index.ts
+│ └── models.ts
 │ └── routes/
 │ └── router.ts
 ├── tsconfig.json
@@ -30,20 +31,20 @@ Contains metadata about the project and dependencies. Key scripts include:
 ### `tsconfig.json`
 TypeScript configuration file specifying compiler options and file inclusions/exclusions.
 
-### `src/app.ts`
+### `app/server.ts`
 The main entry point of the application. It sets up the Express server and routes.
 
-### `src/controllers/index.ts`
+### `app/controllers/controller.ts`
 Contains the `IndexController` class which handles the API endpoints for managing cars. It includes methods for:
 - `getCars`: Retrieves the list of cars.
 - `createCar`: Adds a new car to the list.
 
-### `src/models/index.ts`
+### `app/models/models.ts`
 Defines the `Car` class which represents a car object. It includes methods for:
 - `fromJson`: Creates a `Car` instance from a JSON object.
 - `toJson`: Converts a `Car` instance to a JSON object.
 
-### `src/routes/router.ts`
+### `app/routes/router.ts`
 Defines the routes for the API. It sets up the endpoints and binds them to the controller methods.
 
 ## Building the Project
